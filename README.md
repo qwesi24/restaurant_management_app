@@ -119,12 +119,12 @@ API Endpoints
 ``` app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ message: 'Internal Server Error' });
-}); ```
+});
 
 -	Implement proper try-catch blocks and log errors in Firebase & MongoDB.
 -	Store error logs in a monitoring tool like Sentry:
   ``` const Sentry = require('@sentry/node');
-      Sentry.init({ dsn: 'your_sentry_dsn' }); ```
+      Sentry.init({ dsn: 'your_sentry_dsn' });
 
 -	Use centralized error handling in Express.js.
 -	Implement proper try-catch blocks and log errors in Firebase & MongoDB.
@@ -132,13 +132,13 @@ API Endpoints
 ### 9. Security Considerations
 -	Implement JWT authentication for user sessions:
   ``` const jwt = require('jsonwebtoken');
-      const token = jwt.sign({ userId: user.id }, 'your_secret_key', { expiresIn: '1h' }); ```
+      const token = jwt.sign({ userId: user.id }, 'your_secret_key', { expiresIn: '1h' });
 
 -	Use HTTPS for secure data transmission.
 -	Restrict API access using role-based authorization.
 -	Store passwords securely with bcrypt:
   ``` const bcrypt = require('bcrypt');
-      const hashedPassword = await bcrypt.hash(password, 10); ```
+      const hashedPassword = await bcrypt.hash(password, 10);
 
 -	Implement JWT authentication for user sessions.
 -	Use HTTPS for secure data transmission.
@@ -157,7 +157,7 @@ API Endpoints
     const response = await axios.get('http://localhost:3000/api/orders');
     expect(response.statusCode).toBe(200);
     expect(response.body).toHaveProperty('orders');
-}); ```
+});
 
 -	Unit Tests: Jest for JavaScript, Flutter Test for mobile.
 -	Integration Tests: Postman for API endpoints.
@@ -179,7 +179,7 @@ API Endpoints
           - name: Run tests
           run: npm test
           - name: Deploy to Firebase
-          run: firebase deploy --token "$FIREBASE_TOKEN" ```
+          run: firebase deploy --token "$FIREBASE_TOKEN"
 -	Code Repository: GitHub/GitLab for version control.
 -	Build & Deploy: Use Docker for containerized deployments.
 -	Automated Deployments: GitHub Actions or Firebase Hosting for continuous deployment.
