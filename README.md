@@ -91,17 +91,25 @@ Live Cooking Requests & QR Code Ordering
 - Customers can customize dishes in real time
 - QR code menu access for faster ordering
 ### 6. Database Schema & API Endpoints
-####User Table
+#### User Table
 Column	Type	Description
+
 id	String	Unique user ID
+
 name	String	User's full name
+
 email	String	Email address
+
 role	String	Admin, Staff, or Customer
 #### Orders Table
 Column	Type	Description
+
 order_id	String	Unique order ID
+
 user_id	String	Customer placing the order
+
 items	JSON	List of items ordered
+
 status	String	Pending, Preparing, Served
 
 API Endpoints
@@ -116,15 +124,19 @@ API Endpoints
 -	Implement modular programming for reusability.
 ### 8. Error Handling & Logging
 -	Use centralized error handling in Express.js:
-  app.use((err, req, res, next) => {
-   console.error(err.stack);
-   res.status(500).json({ message: 'Internal Server Error' });
+
+ 	app.use((err, req, res, next) => {
+
+ 	 console.error(err.stack);
+
+ 	 res.status(500).json({ message: 'Internal Server Error' });
  });
 
 -	Implement proper try-catch blocks and log errors in Firebase & MongoDB.
 -	Store error logs in a monitoring tool like Sentry:
 
    const Sentry = require('@sentry/node');
+   
    Sentry.init({ dsn: 'your_sentry_dsn' });
 
 -	Use centralized error handling in Express.js.
@@ -133,14 +145,18 @@ API Endpoints
 
 ### 9. Security Considerations
 -	Implement JWT authentication for user sessions:
-   const jwt = require('jsonwebtoken');
-   const token = jwt.sign({ userId: user.id }, 'your_secret_key', { expiresIn: '1h' });
+
+ 	const jwt = require('jsonwebtoken');
+
+ 	const token = jwt.sign({ userId: user.id }, 'your_secret_key', { expiresIn: '1h' });
 
 -	Use HTTPS for secure data transmission.
 -	Restrict API access using role-based authorization.
 -	Store passwords securely with bcrypt:
-   const bcrypt = require('bcrypt');
-   const hashedPassword = await bcrypt.hash(password, 10);
+
+ 	 const bcrypt = require('bcrypt');
+
+ 	 const hashedPassword = await bcrypt.hash(password, 10);
 
 -	Implement JWT authentication for user sessions.
 -	Use HTTPS for secure data transmission.
@@ -157,10 +173,14 @@ API Endpoints
 -	Integration Tests: Postman for API endpoints.
 -	Automated Testing: GitHub Actions for CI/CD testing before deployment.
 -	Example Jest test for an API endpoint:
-   test('GET /api/orders should return orders', async () => {
-   const response = await axios.get('http://localhost:3000/api/orders');
-   expect(response.statusCode).toBe(200);
-   expect(response.body).toHaveProperty('orders');
+
+ 	 test('GET /api/orders should return orders', async () => {
+
+ 	 const response = await axios.get('http://localhost:3000/api/orders');
+
+ 	 expect(response.statusCode).toBe(200);
+
+ 	 expect(response.body).toHaveProperty('orders');
    });
 
 -	Unit Tests: Jest for JavaScript, Flutter Test for mobile.
@@ -172,19 +192,33 @@ API Endpoints
 -	Build & Deploy: Use Docker for containerized deployments.
 -	Automated Deployments: GitHub Actions or Firebase Hosting for continuous deployment.
 -	Example GitHub Actions workflow:
-   name: CI/CD Pipeline
-       on: [push]
-       jobs:
-         build:
-           runs-on: ubuntu-latest
-            steps:
-           - uses: actions/checkout@v2
-           - name: Install dependencies
-           run: npm install
-           - name: Run tests
-           run: npm test
-           - name: Deploy to Firebase
-           run: firebase deploy --token "$FIREBASE_TOKEN"
+
+ 	 name: CI/CD Pipeline
+
+ 	     on: [push]
+
+ 	     jobs:
+
+ 	       build:
+
+ 	         runs-on: ubuntu-latest
+
+ 	          steps:
+
+ 	         - uses: actions/checkout@v2
+
+ 	         - name: Install dependencies
+
+ 	         run: npm install
+
+ 	         - name: Run tests
+
+ 	         run: npm test
+
+ 	         - name: Deploy to Firebase
+
+ 	         run: firebase deploy --token "$FIREBASE_TOKEN"
+
 -	Code Repository: GitHub/GitLab for version control.
 -	Build & Deploy: Use Docker for containerized deployments.
 -	Automated Deployments: GitHub Actions or Firebase Hosting for continuous deployment.
