@@ -124,16 +124,17 @@ API Endpoints
 -	Implement proper try-catch blocks and log errors in Firebase & MongoDB.
 -	Store error logs in a monitoring tool like Sentry:
 
-  const Sentry = require('@sentry/node');
-  Sentry.init({ dsn: 'your_sentry_dsn' });
+   const Sentry = require('@sentry/node');
+   Sentry.init({ dsn: 'your_sentry_dsn' });
 
 -	Use centralized error handling in Express.js.
 -	Implement proper try-catch blocks and log errors in Firebase & MongoDB.
 -	Store error logs in a monitoring tool like Sentry.
+
 ### 9. Security Considerations
 -	Implement JWT authentication for user sessions:
-  const jwt = require('jsonwebtoken');
-  const token = jwt.sign({ userId: user.id }, 'your_secret_key', { expiresIn: '1h' });
+   const jwt = require('jsonwebtoken');
+   const token = jwt.sign({ userId: user.id }, 'your_secret_key', { expiresIn: '1h' });
 
 -	Use HTTPS for secure data transmission.
 -	Restrict API access using role-based authorization.
@@ -145,50 +146,55 @@ API Endpoints
 -	Use HTTPS for secure data transmission.
 -	Restrict API access using role-based authorization.
 -	Store passwords securely with bcrypt.
+
 ### 10. Third-Party Integrations
 -	Payment Processing: Stripe/PayPal for secure transactions.
 -	AI Services: TensorFlow.js for smart recommendations.
 -	Messaging & Notifications: Twilio for SMS, Firebase Cloud Messaging for push notifications.
+
 ### 11. Testing Strategy
 -	Unit Tests: Jest for JavaScript, Flutter Test for mobile.
 -	Integration Tests: Postman for API endpoints.
 -	Automated Testing: GitHub Actions for CI/CD testing before deployment.
 -	Example Jest test for an API endpoint:
-test('GET /api/orders should return orders', async () => {
-const response = await axios.get('http://localhost:3000/api/orders');
-expect(response.statusCode).toBe(200);
-expect(response.body).toHaveProperty('orders');
-});
+   test('GET /api/orders should return orders', async () => {
+   const response = await axios.get('http://localhost:3000/api/orders');
+   expect(response.statusCode).toBe(200);
+   expect(response.body).toHaveProperty('orders');
+   });
 
 -	Unit Tests: Jest for JavaScript, Flutter Test for mobile.
 -	Integration Tests: Postman for API endpoints.
 -	Automated Testing: GitHub Actions for CI/CD testing before deployment.
+
 ### 12. CI/CD Pipeline Setup
 -	Code Repository: GitHub/GitLab for version control.
 -	Build & Deploy: Use Docker for containerized deployments.
 -	Automated Deployments: GitHub Actions or Firebase Hosting for continuous deployment.
 -	Example GitHub Actions workflow:
-name: CI/CD Pipeline
-    on: [push]
-    jobs:
-      build:
-        runs-on: ubuntu-latest
-         steps:
-        - uses: actions/checkout@v2
-        - name: Install dependencies
-        run: npm install
-        - name: Run tests
-        run: npm test
-        - name: Deploy to Firebase
-        run: firebase deploy --token "$FIREBASE_TOKEN"
+   name: CI/CD Pipeline
+       on: [push]
+       jobs:
+         build:
+           runs-on: ubuntu-latest
+            steps:
+           - uses: actions/checkout@v2
+           - name: Install dependencies
+           run: npm install
+           - name: Run tests
+           run: npm test
+           - name: Deploy to Firebase
+           run: firebase deploy --token "$FIREBASE_TOKEN"
 -	Code Repository: GitHub/GitLab for version control.
 -	Build & Deploy: Use Docker for containerized deployments.
 -	Automated Deployments: GitHub Actions or Firebase Hosting for continuous deployment.
+
 ### 13. Developer Setup Guide
 -	Install Node.js, npm/yarn, Firebase CLI.
 -	Clone the repo and run npm install for backend, flutter pub get for mobile.
 -	Set up environment variables in .env for API keys.
 -	Run local server using npm start for Express.js, flutter run for mobile.
+
 ### 14. Deployment & Maintenance
 Deployment Steps
 1.	Set up Firebase for authentication and database.
@@ -200,5 +206,6 @@ Maintenance Plan
 -	Monitor performance and resolve issues.
 -	Regularly update security patches.
 -	Gather feedback and iterate on new features.
+
 ### 15. Conclusion
 This guide provides an in-depth roadmap for developing and maintaining Dine Hub. Following Agile methodology, the system will ensure a seamless experience for restaurant owners, staff, and customers.
