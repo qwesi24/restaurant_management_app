@@ -116,10 +116,10 @@ API Endpoints
 -	Implement modular programming for reusability.
 ### 8. Error Handling & Logging
 -	Use centralized error handling in Express.js:
-``` app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).json({ message: 'Internal Server Error' });
-});
+  app.use((err, req, res, next) => {
+   console.error(err.stack);
+   res.status(500).json({ message: 'Internal Server Error' });
+ });
 
 -	Implement proper try-catch blocks and log errors in Firebase & MongoDB.
 -	Store error logs in a monitoring tool like Sentry:
@@ -139,8 +139,8 @@ API Endpoints
 -	Use HTTPS for secure data transmission.
 -	Restrict API access using role-based authorization.
 -	Store passwords securely with bcrypt:
-  const bcrypt = require('bcrypt');
-  const hashedPassword = await bcrypt.hash(password, 10);
+   const bcrypt = require('bcrypt');
+   const hashedPassword = await bcrypt.hash(password, 10);
 
 -	Implement JWT authentication for user sessions.
 -	Use HTTPS for secure data transmission.
