@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Available Deals</title>
+  <!-- Inline CSS -->
+  <style>
+    /* --------------------
+       BASIC RESET & BODY
+    -------------------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.5;
+      padding: 1rem;
+    }
+
+    /* --------------------
+       HEADER SECTION
+    -------------------- */
+    .header-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+      gap: 1rem;
+    }
+    .header-image {
+      width: 100px;
+      height: auto;
+      flex-shrink: 0;
+    }
+    .header-text {
+      flex: 1;
+      min-width: 200px;
+    }
+    .header-text h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #111;
+    }
+    .header-text p {
+      font-size: 1rem;
+      max-width: 600px;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* --------------------
+       DEALS GRID
+    -------------------- */
+    .deals-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    /* --------------------
+       DEAL CARD
+    -------------------- */
+    .deal-card {
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s ease;
+      position: relative;
+    }
+    .deal-card:hover {
+      transform: translateY(-3px);
+    }
+    .deal-image-container {
+      position: relative;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    .deal-image-container img {
+      width: 100%;
+      border-radius: 8px;
+      display: block;
+    }
+
+    /* Discount Badge */
+    .sale-badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background-color: #f44336;
+      color: #fff;
+      font-size: 0.75rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .deal-title {
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+      color: #222;
+      font-weight: bold;
+    }
+    .deal-subtitle {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Price & Reviews (small detail row) */
+    .price-reviews {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0.5rem;
+    }
+    .price {
+      font-weight: bold;
+      color: #333;
+    }
+    .reviews {
+      font-size: 0.85rem;
+      color: #999;
+    }
+
+    /* --------------------
+       VIEW ALL BUTTON
+    -------------------- */
+    .view-all-container {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .view-all-btn {
+      background-color: #ffd500;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      font-weight: bold;
+    }
+    .view-all-btn:hover {
+      background-color: #ffb700;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER SECTION -->
+  <header class="header-section">
+    <!-- Sushi Image (Placeholder) -->
+    <img 
+      src="foods png/Rectangle 2.png" 
+      alt="Sushi" 
+      class="header-image"
+    />
+    <div class="header-text">
+      <h1>Available Deals</h1>
+      <p>
+        Take advantage of each deal once a month for maximum benefit. 
+        This applies to all deals and helps you save more. 
+        Explore our promotions and save on what you need.
+      </p>
+    </div>
+  </header>
+
+  <!-- DEALS GRID -->
+  <section class="deals-grid">
+    
+    <!-- CARD 1 -->
+    <article class="deal-card">
+      <div class="deal-image-container">
+        <img src="foods png/Gemini_Generated_Image_xsgt46xsgt46xsgt.jpeg" alt="Big Bick Cook">
+        <span class="sale-badge">50% off</span>
+      </div>
+      <h3 class="deal-title">Big Bick Cook</h3>
+      <p class="deal-subtitle">50% off BBC Burger And Rasta Pasta</p>
+      <div class="price-reviews">
+        <span class="price">₦2,213</span>
+        <span class="reviews">8.2k+ Reviews</span>
+      </div>
+    </article>
+
+    <!-- CARD 2 -->
+    <article class="deal-card">
+      <div class="deal-image-container">
+        <img src="foods png/82adc32d-a6d9-4c39-94d7-600d2c34c5fe.jpg" alt="QK Confectionary">
+        <span class="sale-badge">25% off</span>
+      </div>
+      <h3 class="deal-title">QK Confectionary</h3>
+      <p class="deal-subtitle">25% off your sweet treats</p>
+      <div class="price-reviews">
+        <span class="price">₦1,999</span>
+        <span class="reviews">6.3k+ Reviews</span>
+      </div>
+    </article>
+
+    <!-- CARD 3 -->
+    <article class="deal-card">
+      <div class="deal-image-container">
+        <img src="foods png/176b53ef-e721-4005-b26a-5a264a7e0eaf.jpg" alt="Extra Life Coffee">
+        <span class="sale-badge">40% off</span>
+      </div>
+      <h3 class="deal-title">Extra Life Coffee</h3>
+      <p class="deal-subtitle">40% off coffee & pastry combo</p>
+      <div class="price-reviews">
+        <span class="price">₦2,500</span>
+        <span class="reviews">7.5k+ Reviews</span>
+      </div>
+    </article>
+
+    <!-- CARD 4 -->
+    <article class="deal-card">
+      <div class="deal-image-container">
+        <img src="foods png/418503eb-3d3e-4e39-9b42-f67e0ab547c6.jpg" alt="The Lebanese Craft">
+        <span class="sale-badge">10% off</span>
+      </div>
+      <h3 class="deal-title">The Lebanese Craft</h3>
+      <p class="deal-subtitle">10% off authentic dishes</p>
+      <div class="price-reviews">
+        <span class="price">₦3,000</span>
+        <span class="reviews">4.1k+ Reviews</span>
+      </div>
+    </article>
+
+    <!-- CARD 5 -->
+    <article class="deal-card">
+      <div class="deal-image-container">
+        <img src="foods png/cd8cb36e-a9bf-4d99-ac15-7a5333acbb13.jpg" alt="Extra Life Coffee">
+        <span class="sale-badge">45% off</span>
+      </div>
+      <h3 class="deal-title">Extra Life Coffee</h3>
+      <p class="deal-subtitle">45% off the white mocha special</p>
+      <div class="price-reviews">
+        <span class="price">₦2,100</span>
+        <span class="reviews">5.8k+ Reviews</span>
+      </div>
+    </article>
+
+    <!-- CARD 6 -->
+    <article class="deal-card">
+      <div class="deal-image-container">
+        <img src="foods png/chicken .jpg" alt="Big Bick Cook">
+        <span class="sale-badge">50% off</span>
+      </div>
+      <h3 class="deal-title">Big Bick Cook</h3>
+      <p class="deal-subtitle">50% off BBC Burger And Rasta Pasta</p>
+      <div class="price-reviews">
+        <span class="price">₦2,213</span>
+        <span class="reviews">8.2k+ Reviews</span>
+      </div>
+    </article>
+
+    <!-- CARD 7 -->
+    <article class="deal-card">
+      <div class="deal-image-container">
+        <img src="foods png/farfalle-pasta-with-seafood-cherry-tomatoes-green-peas.jpg" alt="QK Confectionary">
+        <span class="sale-badge">5% off</span>
+      </div>
+      <h3 class="deal-title">QK Confectionary</h3>
+      <p class="deal-subtitle">5% off all pastries & cakes</p>
+      <div class="price-reviews">
+        <span class="price">₦2,213</span>
+        <span class="reviews">2.1k+ Reviews</span>
+      </div>
+    </article>
+
+    <!-- CARD 8 -->
+    <article class="deal-card">
+      <div class="deal-image-container">
+        <img src="https://via.placeholder.com/200?text=Extra+Life+Coffee" alt="Extra Life Coffee">
+        <span class="sale-badge">35% off</span>
+      </div>
+      <h3 class="deal-title">Extra Life Coffee</h3>
+      <p class="deal-subtitle">35% off cappuccino & croissant</p>
+      <div class="price-reviews">
+        <span class="price">₦2,000</span>
+        <span class="reviews">3.2k+ Reviews</span>
+      </div>
+    </article>
+
+    <!-- CARD 9 -->
+    <article class="deal-card">
+      <div class="deal-image-container">
+        <img src="https://via.placeholder.com/200?text=The+Lebanese+Craft" alt="The Lebanese Craft">
+        <span class="sale-badge">20% off</span>
+      </div>
+      <h3 class="deal-title">The Lebanese Craft</h3>
+      <p class="deal-subtitle">20% off shawarma & fries</p>
+      <div class="price-reviews">
+        <span class="price">₦2,800</span>
+        <span class="reviews">4.7k+ Reviews</span>
+      </div>
+    </article>
+
+    <!-- CARD 10 -->
+    <article class="deal-card">
+      <div class="deal-image-container">
+        <img src="https://via.placeholder.com/200?text=QK+Confectionary" alt="QK Confectionary">
+        <span class="sale-badge">25% off</span>
+      </div>
+      <h3 class="deal-title">QK Confectionary</h3>
+      <p class="deal-subtitle">25% off your sweet treats</p>
+      <div class="price-reviews">
+        <span class="price">₦1,999</span>
+        <span class="reviews">6.3k+ Reviews</span>
+      </div>
+    </article>
+
+    <!-- CARD 11 -->
+    <article class="deal-card">
+      <div class="deal-image-container">
+        <img src="https://via.placeholder.com/200?text=Big+Bick+Cook" alt="Big Bick Cook">
+        <span class="sale-badge">50% off</span>
+      </div>
+      <h3 class="deal-title">Big Bick Cook</h3>
+      <p class="deal-subtitle">50% off BBC Burger And Rasta Pasta</p>
+      <div class="price-reviews">
+        <span class="price">₦2,213</span>
+        <span class="reviews">8.2k+ Reviews</span>
+      </div>
+    </article>
+
+    <!-- CARD 12 -->
+    <article class="deal-card">
+      <div class="deal-image-container">
+        <img src="https://via.placeholder.com/200?text=Extra+Life+Coffee" alt="Extra Life Coffee">
+        <span class="sale-badge">45% off</span>
+      </div>
+      <h3 class="deal-title">Extra Life Coffee</h3>
+      <p class="deal-subtitle">45% off the white mocha special</p>
+      <div class="price-reviews">
+        <span class="price">₦2,100</span>
+        <span class="reviews">5.8k+ Reviews</span>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- VIEW ALL BUTTON -->
+  <div class="view-all-container">
+    <button class="view-all-btn" onclick="viewAllDeals()">View All</button>
+  </div>
+
+  <!-- Inline JavaScript -->
+  <script>
+    function viewAllDeals() {
+      alert("You clicked 'View All'!");
+      // Extend this function to load more deals, redirect, etc.
+    }
+  </script>
+
+</body>
+</html>
